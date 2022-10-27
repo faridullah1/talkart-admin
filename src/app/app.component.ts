@@ -1,6 +1,6 @@
 import { FuseNavigationService } from '@fuse/components/navigation';
 import { Component } from '@angular/core';
-import { UbluxAppNavigation } from './layout/common/navigation';
+import { TalkArtAppNavigation } from './layout/common/navigation';
 
 @Component({
     selector   : 'app-root',
@@ -14,6 +14,6 @@ export class AppComponent
      */
     constructor(private _fuseNavigationService: FuseNavigationService)
     {
-		this._fuseNavigationService.storeNavigation('main', UbluxAppNavigation.navigation);
+		this._fuseNavigationService.storeNavigation('main', TalkArtAppNavigation.navigation);
     }
 }

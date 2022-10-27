@@ -1,7 +1,7 @@
 {
-    "name": "ublux",
+    "name": "Talk Art",
     "version": "1.0.0",
-    "description": "Ublux - Cloud communications platform that adapts to your business",
+    "description": "Talk Art - Art generation platform",
     "author": "Farid ullah",
     "private": true,
     "scripts": {

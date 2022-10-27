@@ -1,7 +1,7 @@
 import { Navigation } from 'app/core/navigation/navigation.types';
 
 
-export class UbluxAppNavigation
+export class TalkArtAppNavigation
 {
     // main navigation
     public static navigation: Navigation = {

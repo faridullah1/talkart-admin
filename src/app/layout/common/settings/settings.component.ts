@@ -5,7 +5,7 @@ import { FuseConfigService } from '@fuse/services/config';
 import { AppConfig, Scheme, Theme, Themes } from 'app/core/config/app.config';
 import { Layout } from 'app/layout/layout.types';
 import { NavigationService } from 'app/core/navigation/navigation.service';
-import { UbluxAppNavigation } from '../navigation';
+import { TalkArtAppNavigation } from '../navigation';
 
 @Component({
     selector     : 'settings',
@@ -99,7 +99,7 @@ export class SettingsComponent implements OnInit, OnDestroy
 
             // Set the config
             this._fuseConfigService.config = {layout};
-			const navigation = UbluxAppNavigation.navigation;
+			const navigation = TalkArtAppNavigation.navigation;
 			this._navigationService.set(navigation);
         });
     }
