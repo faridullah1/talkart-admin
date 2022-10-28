@@ -12,6 +12,13 @@ export class TalkArtAppNavigation
 				link: 'users',
 				title: 'Users',
 				id: 'users',
+			},
+			{
+				type: 'basic',
+				icon: 'subscriptions',
+				link: 'plans',
+				title: 'Subscription Plan',
+				id: 'plan',
 			}
 		],
 		horizontal: [
@@ -21,6 +28,13 @@ export class TalkArtAppNavigation
 				link: 'users',
 				title: 'Users',
 				id: 'users',
+			},
+			{
+				type: 'basic',
+				icon: 'plan',
+				link: 'plan',
+				title: 'Subscription Plan',
+				id: 'plan',
 			}
 		]
 	};

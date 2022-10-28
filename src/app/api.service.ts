@@ -24,7 +24,7 @@ export class ApiService {
 		return this.http.patch(this.baseUrl + slug, payload);
 	}
 
-	delete(slug: string, payload: any): Observable<any> {
-		return this.http.delete(this.baseUrl + slug, payload);
+	delete(slug: string): Observable<any> {
+		return this.http.delete(this.baseUrl + slug);
 	}
 }

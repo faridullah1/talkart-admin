@@ -1,0 +1,36 @@
+<div class="container p-8">
+	<div class="no-plans" *ngIf="!loading && subscriptions?.length === 0;">
+		<h1 class="text-3xl font-semibold tracking-tight leading-8">No Subscription Plan Added Yet</h1>
+		<button mat-raised-button color="primary" class="mt-5" (click)="openPlanDialog()">Add Plan</button>
+	</div>
+
+	<div class="flex flex-col items-center" *ngIf="subscriptions?.length > 0;">
+		<button class="btn-add mb-5" mat-raised-button color="primary" (click)="openPlanDialog()">Add New Subscription Plan</button>
+
+		<div class="card-container">
+			<div class="card" *ngFor="let subs of subscriptions;">
+				<div class="recommend-container">
+					<div class="recommend" *ngIf="subs.isRecommended">recommended one</div>
+				</div>
+
+				<div class="package">
+					<h4>{{ subs.title }}</h4>
+					<span class="credits">💰 {{ subs.coins }} Credits</span>
+					<small>/month</small>
+					<span class="amnt">${{ subs.price }} USD 
+						<small>/month*</small>
+					</span>
+				</div>
+
+				<div class="details">
+					<span class="benefit" *ngFor="let rec of subs.benefits;">{{ rec }}</span>
+				</div>
+
+				<div class="actions">
+					<button mat-raised-button color="primary" (click)="openPlanDialog(subs)">Edit</button>
+					<button mat-raised-button color="warn" (click)="onDeletePlan(subs)">Delete</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

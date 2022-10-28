@@ -83,7 +83,6 @@ export class AuthService
      */
     check(): Observable<boolean>
     {
-		console.log(this.accessToken,  AuthUtils.isTokenExpired(this.accessToken));
         // Check the access token availability
         if ( !this.accessToken )
         {

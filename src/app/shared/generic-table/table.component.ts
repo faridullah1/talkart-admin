@@ -188,7 +188,7 @@ export class TableComponent implements OnInit {
 
 			dialog.afterClosed().subscribe((action: 'confirmed' | 'cancelled') => {
 				if (action === 'confirmed') {
-					this.apiService.delete(`${this.config.slug}/Delete/${this.selectedRow.id}`, {}).subscribe(() => {
+					this.apiService.delete(`${this.config.slug}/${this.selectedRow.id}`).subscribe(() => {
 						this.loadData();
 					});
 				}

@@ -1,0 +1,10 @@
+::ng-deep .dlg-add-plan .mat-dialog-container {
+	padding: 0 !important;
+}
+
+.container {
+	.actions {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

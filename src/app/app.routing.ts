@@ -51,9 +51,14 @@ export const appRoutes: Route[] = [
         canActivateChild: [AuthGuard],
 		component: LayoutComponent,
         children   : [
-			{ 	path: 'users', loadChildren: () =>
+			{
+				path: 'users', loadChildren: () =>
 				import('app/modules/admin/users/users.module').then(m => m.UsersModule)
 			},
+			{
+				path: 'plans', loadChildren: () =>
+				import('app/modules/admin/subscriptions/subscriptions.module').then(m => m.SubscriptionsModule)
+			}
         ]
     }
 ];
