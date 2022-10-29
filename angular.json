@@ -68,12 +68,12 @@
                                 {
                                     "type": "initial",
                                     "maximumWarning": "3mb",
-                                    "maximumError": "5mb"
+                                    "maximumError": "15mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "75kb",
-                                    "maximumError": "90kb"
+                                    "maximumError": "190kb"
                                 }
                             ],
                             "fileReplacements": [
@@ -99,10 +99,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "fuse:build:production"
+                            "browserTarget": "fuse:build:production",
+                            "disableHostCheck": false
                         },
                         "development": {
-                            "browserTarget": "fuse:build:development"
+                            "browserTarget": "fuse:build:development",
+                            "disableHostCheck": false
                         }
                     },
                     "defaultConfiguration": "development"
