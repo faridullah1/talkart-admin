@@ -3,6 +3,7 @@ export type TableFormat = 'number' | 'image' | 'boolean' | 'date' | 'datetime';
 export interface TableConfig {
     title: string;
     slug: string;
+	primaryKey: string;
 
 	addBtnText?: string;
 	showAdd: boolean;

@@ -1,7 +1,7 @@
 import { MatDialog } from '@angular/material/dialog';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
-import { TableConfig, TableAction, TableSignal } from 'app/shared/generic-table/models';
+import { TableConfig, TableAction } from 'app/shared/generic-table/models';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { TableConfig, TableAction, TableSignal } from 'app/shared/generic-table/
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent {
 	tableConfig: TableConfig;
 	actions = new Subject<TableAction>();
 
@@ -18,6 +18,7 @@ export class UsersComponent implements OnInit {
 		this.tableConfig = {
 			title: 'Users',
 			slug: 'users',
+			primaryKey: 'userId',
 
 			showAdd: false,
 			showSearch: true,
@@ -25,7 +26,6 @@ export class UsersComponent implements OnInit {
 			searchColumn: 'name',
 
 			rowActions: [
-				{name: 'edit', title: 'Edit', action: 'OnEdit' },
 				{name: 'delete', title: 'Delete', action: 'OnDelete' }
 			],
 
@@ -35,12 +35,5 @@ export class UsersComponent implements OnInit {
 				{ name: 'createdAt', title: 'Date Created', format: 'date' },
 			]
 		};
-	}
-
-	ngOnInit(): void {
-	}
-
-	onTableSignal(ev: TableSignal): void {
-		console.log('Table signal =', ev);
 	}
 }
