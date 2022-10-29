@@ -2,7 +2,7 @@ FROM trion/ng-cli as builder
 WORKDIR /app
 COPY package.json package.json
 COPY package-lock.json package-lock.json
-RUN chown -R node:node /app/*
+RUN chown -R node:node /app
 RUN npm install
 RUN npm ci  --debug 
 COPY . .
