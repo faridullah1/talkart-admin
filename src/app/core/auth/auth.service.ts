@@ -50,7 +50,7 @@ export class AuthService
      */
     signIn(credentials: { email: string; password: string }): Observable<any>
     {
-        return this._httpClient.post(this.baseUrl + '/auth/login', credentials).pipe(
+        return this._httpClient.post(this.baseUrl + 'auth/login', credentials).pipe(
             switchMap((response: any) => {
                 // Store the access token in the local storage
                 this.accessToken = response.access_token;
