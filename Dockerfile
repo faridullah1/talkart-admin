@@ -1,6 +1,7 @@
 FROM trion/ng-cli as builder
 WORKDIR /app
 COPY package.json package.json
+RUN npm i
 RUN npm ci --debug
 COPY . .
 ENV NODE_ENV=production
