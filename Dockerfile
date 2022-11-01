@@ -1,7 +1,7 @@
 FROM trion/ng-cli as builder
 WORKDIR /app
 COPY package.json package.json
-COPY package-lock.json package-lock.json
+RUN npm i
 RUN npm ci --debug
 COPY . .
 ENV NODE_ENV=production
